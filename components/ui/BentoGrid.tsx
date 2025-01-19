@@ -99,7 +99,6 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold"></div>
           </BackgroundGradientAnimation>
         )}
       </div>
@@ -149,7 +148,7 @@ export const BentoGridItem = ({
           <div className="absolute z-40 w-full h-full">
             <Lottie options={animationOptions} />
           </div>
-          <div className="relative z-50 mt-5">
+          <div>
             <MagicButton
               title={copied ? "Email is Copied!" : "Copy my email address"}
               icon={<IoCopyOutline />}
