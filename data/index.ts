@@ -205,13 +205,11 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      href: "https://github.com/Mananbh12"
     },
     {
       id: 2,
-      img: "/twit.svg",
-    },
-    {
-      id: 3,
       img: "/link.svg",
+      href: "https://www.linkedin.com/in/manan-bhardwaj-945643226"
     },
   ];

@@ -111,3 +111,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+#sentry-feedback-button {
+  z-index: 9999 !important;
+}
