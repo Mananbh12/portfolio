@@ -21,15 +21,15 @@ const Hero = () => {
                     <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>Dynamic Web Magic with Next.js</h2>
                     <TextGenerateEffect 
                     className='text-center text-40 md:text-xl lg:text-6xl'
-                    words={'Transforming concepts into seamless user experiences'} 
+                    words={'De la technique à la stratégie : un profil hybride pour accompagner vos projets'} 
                     />
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                        Hi, I&apos;m Manan, a fullstack developper
+                        Je suis Manan, un développeur, mais pas que ...
                     </p>
 
-                    <a href="#about">
+                    <a href="#projects">
                         <MagicButton
-                        title="Show my work"
+                        title="Voir mes projets"
                         icon={<FaLocationArrow />}
                         position='right'
                         />

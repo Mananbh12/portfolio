@@ -51,11 +51,17 @@ export const BentoGridItem = ({
   spareImg?: string
 }) => {
   const [copied, setCopied] = useState(false);
-  const handleCopy = () =>{
-    navigator.clipboard.writeText('mananbhrdwj@gmail.com');
-
-    setCopied(true);
-  }
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('Test'); // Essayez avec un texte simple
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Réinitialisation de l'état après 2 secondes
+    } catch (err) {
+      console.error("Erreur lors de la copie : ", err); // Affiche l'erreur dans la console
+    }
+  };
+  
+  
   const animationOptions = {
     loop: copied,
     autoplay: copied,
@@ -150,7 +156,7 @@ export const BentoGridItem = ({
           </div>
           <div>
             <MagicButton
-              title={copied ? "Email is Copied!" : "Copy my email address"}
+              title={copied ? "Email copié !" : "Copiez mon adresse mail"}
               icon={<IoCopyOutline />}
               position="left"
               handleClick={handleCopy}
