@@ -1,15 +1,9 @@
 "use client";
-import React, { ReactNode } from "react";
-import {
-  motion,
-  useAnimationFrame,
-  useMotionTemplate,
-  useMotionValue,
-  useTransform,
-} from "framer-motion";
-import { useRef } from "react";
+import React, { ReactNode, HTMLProps, SVGProps, ComponentType, useRef } from "react";
+import { motion, useAnimationFrame, useMotionTemplate, useMotionValue, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+// Typage du composant Button
 export function Button({
   borderRadius = "1.75rem",
   children,
@@ -22,7 +16,7 @@ export function Button({
 }: {
   borderRadius?: string;
   children: ReactNode;
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>; // Typage du `as`
+  as?: keyof JSX.IntrinsicElements | ComponentType<HTMLProps<HTMLElement>>; // Typage du `as`
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
@@ -38,7 +32,7 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
-      {...otherProps}
+      {...otherProps} // Laissez les autres props comme elles sont
     >
       <div
         className="absolute inset-0"
@@ -69,6 +63,7 @@ export function Button({
   );
 }
 
+// Typage du composant MovingBorder
 export const MovingBorder = ({
   children,
   duration = 2000,
@@ -112,7 +107,7 @@ export const MovingBorder = ({
         className="absolute h-full w-full"
         width="100%"
         height="100%"
-        {...otherProps}
+        {...otherProps} // Laissez les autres props comme elles sont
       >
         <rect
           fill="none"
