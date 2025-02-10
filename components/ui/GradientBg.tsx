@@ -39,6 +39,8 @@ export const BackgroundGradientAnimation = ({
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
+
+  // Dépendance ajoutée sur `gradientBackgroundStart`, `gradientBackgroundEnd`, `firstColor`, `secondColor`, `thirdColor`, `fourthColor`, `fifthColor`, `pointerColor`, `size`, `blendingValue`
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -56,7 +58,18 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [
+    gradientBackgroundStart,
+    gradientBackgroundEnd,
+    firstColor,
+    secondColor,
+    thirdColor,
+    fourthColor,
+    fifthColor,
+    pointerColor,
+    size,
+    blendingValue,
+  ]);
 
   useEffect(() => {
     function move() {
@@ -71,7 +84,7 @@ export const BackgroundGradientAnimation = ({
     }
 
     move();
-  }, [tgX, tgY]);
+  }, [curX, curY, tgX, tgY]); // Dépendance ajoutée sur curX, curY, tgX et tgY
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
@@ -82,9 +95,11 @@ export const BackgroundGradientAnimation = ({
   };
 
   const [isSafari, setIsSafari] = useState(false);
+
+  // Dépendance sur la variable `isSafari`
   useEffect(() => {
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-  }, []);
+  }, []); // Aucune variable n'est utilisée ici, donc on laisse le tableau vide
 
   return (
     <div
