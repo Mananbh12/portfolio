@@ -1,7 +1,5 @@
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Hero from "../components/Hero";
-import Image from "next/image";
-import { FaHome } from "react-icons/fa";
 import Grid from "@/components/Grid";
 import RecentProjects from "@/components/RecentProjects";
 import { navItems } from "@/data";

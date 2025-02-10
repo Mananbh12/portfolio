@@ -1,6 +1,8 @@
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import { companies, testimonials } from '@/data'
+import Image from 'next/image';
+
 
 const Clients = () => {
   return (
@@ -20,15 +22,19 @@ const Clients = () => {
               {companies.map(({id,img, name, nameImg}) => {
                 return(
                   <div key={id} className='flex md:max-w-60 max-w-32 gap-2'>
-                    <img 
+                    <Image 
                     src={img}
                     alt={name}
                     className='md:w-10 w-5'
+                    width={40} 
+                    height={40}
                     />
-                    <img 
+                    <Image 
                     src={nameImg}
                     alt={name}
                     className='md:w-24 w-20'
+                    width={96} 
+                    height={40}
                     />
                   </div>
                 )
