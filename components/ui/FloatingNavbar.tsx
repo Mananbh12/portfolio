@@ -16,7 +16,7 @@ type NavItem = {
   icon?: JSX.Element;
 };
 
-export const FloatingNav = ({
+export const FloatingNavbar = ({
   navItems,
   className,
 }: {
