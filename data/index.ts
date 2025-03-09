@@ -83,7 +83,7 @@ export const navItems = [
       title: "Crespières Château – Atland Résidentiel",
       des: "Résidence de 79 logements où nous intervenons pour le sol dur, livraison prévue en janvier 2025. 2000m2 carrelage",
       img: "/crespieres.jpg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+      iconLists: [],
       link: "https://www.atland-logement.fr/actualites/article/premiere-pierre-a-crespieres",
     },
     {
@@ -99,7 +99,7 @@ export const navItems = [
       title: "Romainville Fareva – Paris Ouest Construction",
       des: "Intervention en sols durs et sols souples dans 146 studios et espaces de vie d'artistes. 4000m2 pvc, 500m2 carrelage",
       img: "/romainville.jpg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+      iconLists: [],
       link: "https://www.ville-romainville.fr/1073-zac-de-l-horloge.htm",
     },
   ];
@@ -141,20 +141,18 @@ export const navItems = [
     {
       id: 1,
       name: "Nexity",
-      img: "/nexity-logo.svg",
-      nameImg: "/nexity-texte.png",
+      //img: "/nexity-logo.svg",
+      img: "/nexity-texte.png",
     },
     {
       id: 2,
       name: "Atland Residentiel",
-      img: "/atland-logo.jpeg",
-      nameImg: "/atland-texte.png",
+      img: "/atland-texte.png",
     },
     {
       id: 3,
       name: "Paris Ouest Construction",
       img: "/paris-ouest-logo.png",
-      nameImg: "/hostName.svg",
     },
   ];
   
